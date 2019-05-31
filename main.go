@@ -10,9 +10,9 @@ import (
 func parseInput(args []string) ([]float64, error) {
 	res := make([]float64, len(args))
 
-	for i := 0; i< len(args); i++ {
+	for i := 0; i < len(args); i++ {
 		f, err := strconv.ParseFloat(args[i], 64)
-		if err!=nil {
+		if err != nil {
 			return []float64{}, err
 		}
 		res[i] = f
@@ -28,13 +28,13 @@ func main() {
 	}
 
 	numbers, err := parseInput(os.Args[1:])
-	if err!=nil {
+	if err != nil {
 		fmt.Printf("error while parsing argument list :%v", err)
 		os.Exit(0)
 	}
 
 	max1, max2, err := maximum.FindMaximum(numbers)
-	if err!=nil {
+	if err != nil {
 		fmt.Printf("error while find maximum: %v", err)
 		os.Exit(0)
 	}

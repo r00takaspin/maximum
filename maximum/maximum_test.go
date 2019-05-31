@@ -18,13 +18,13 @@ func TestFindMaximum(t *testing.T) {
 			[]float64{1, 1.0, 1, 1}, 0, 0, ErrNoMaximum,
 		},
 		"basic example": {
-			[]float64{4, 23, 5, 23, 7}, 7, 23 , nil,
+			[]float64{4, 23, 5, 23, 7}, 7, 23, nil,
 		},
 		"first elements are same": {
-			[]float64{4, 4, 1, 3}, 3,4,nil,
+			[]float64{4, 4, 1, 3}, 3, 4, nil,
 		},
 		"last elements are same": {
-			[]float64{1, 3, 4,4}, 3,4,nil,
+			[]float64{1, 3, 4, 4}, 3, 4, nil,
 		},
 	}
 
