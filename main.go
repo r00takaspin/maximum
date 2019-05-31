@@ -22,8 +22,8 @@ func parseInput(args []string) ([]float64, error) {
 }
 
 func main() {
-	if len(os.Args) < 3 {
-		fmt.Printf("invalid arguments")
+	if len(os.Args) == 1 {
+		fmt.Printf("please pass numbers: ./max 1 2 59 32.3 2")
 		os.Exit(0)
 	}
 
@@ -33,9 +33,9 @@ func main() {
 		os.Exit(0)
 	}
 
-	max1, max2, err := maximum.FindMaximum(numbers)
+	max1, max2, err := maximum.MaxPair(numbers)
 	if err != nil {
-		fmt.Printf("error while find maximum: %v", err)
+		fmt.Printf("error while finding maximum elements: %v", err)
 		os.Exit(0)
 	}
 
